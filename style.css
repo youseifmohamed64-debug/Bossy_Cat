@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffebee;
+    font-family: sans-serif;
+    overflow: hidden; /* عشان الزرار ميعملش سكرول وهو بيهرب */
+}
+
+.question-container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.local-gif {
+    width: 250px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق صوركم b و y في الآخر */
+.photos-flex {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.photo-frame {
+    width: 150px; /* كبرنا الصور شوية */
+    height: 150px;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.her-frame { background-color: white; }
+.my-frame { background-color: #fce4ec; border: 2px solid #f06292; }
+
+/* القلب اللي بينبض فوق الصور */
+.floating-heart {
+    position: absolute;
+    top: -50px;
+    font-size: 4rem;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.question { font-size: 2rem; color: #d81b60; margin-bottom: 30px; }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 50px;
+}
+
+.btn {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.1s; /* سرعة استجابة الحركة */
+}
+
+.btn-yes { background-color: #4caf50; color: white; }
+
+.btn-no {
+    background-color: #f44336;
+    color: white;
+    position: absolute; /* ده اللي هيخليه يجري في كل حتة */
+}
